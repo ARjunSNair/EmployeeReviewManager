@@ -1,0 +1,25 @@
+<div class="container" > 
+    <form (submit)="onSavePost(postForm)" #postForm="ngForm">
+   
+  
+        <label for="nameid" >Name</label>
+        <input id = "nameid" type="text" name="ename" [ngModel]='employee?.employeename' required #ename="ngModel" ><br>
+        <label for="emailid" >Email</label>
+        <input id = "emailid" type="email"  name="eid" [ngModel]='employee?.employeeid'  required #eid="ngModel"><br>  
+    
+        <label for="departmentid" >Department </label>
+        <input id = "departmentid" type="text" name="dept" [ngModel]='employee?.department' required #dept="ngModel"><br>
+    
+    
+        <button type="submit" >Add Employee</button>
+        <button onclick=" window.history.back()">Go Back</button>
+    
+    
+    </form>
+
+
+</div>
+
+
+
+<!-- <a  class="btn btn-primary" routerLink="admin/employees">Go back to employeelist</a> -->

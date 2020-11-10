@@ -1,0 +1,11 @@
+
+<form (submit)="onsavefeedback(postfeedback)" #postfeedback="ngForm" >
+    <input type="text" placeholder="enter feedback" name="feedback" ngModel  #feedback="ngModel" [ngModel]='employeereviewlist?.feedback' >
+    <button  type="submit"> submit feedback</button>
+</form>
+
+
+<!-- <form (submit)="onsavereview(postreview)" #postreview="ngForm" >
+    <input type="text"  id = "reviewid" type="text" name="review" ngModel placeholder="enter performance review" [ngModel]='employee?.performanceReview' required #review="ngModel" ><br>
+    <button type="submit" >Add Performance Review</button>
+</form> -->

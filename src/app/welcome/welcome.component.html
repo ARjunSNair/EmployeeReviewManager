@@ -1,0 +1,10 @@
+
+
+<form (submit)="onlogin(postreview)" #postreview="ngForm" >
+    <input type="email"  id = "email" type="text" name="eid" ngModel placeholder="enter email" required #eid="ngModel"  email ><br>
+    <button type="submit" >Login</button>
+</form>
+<p>{{status}}</p>
+<ng-container *ngIf="employee">
+    <div><p> Welcome {{employee.employeename}}</p></div>
+</ng-container>

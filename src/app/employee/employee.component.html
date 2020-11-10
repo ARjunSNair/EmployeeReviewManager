@@ -1,0 +1,37 @@
+<div class="container">
+    <li> <h3> {{employee.employeename}}</h3></li>
+    <li><h5> employeeid= {{employee.employeeid}}</h5></li> 
+    
+        <!-- <li>{{reviewlist.id}}</li> -->
+
+        <li *ngIf="employeereviewlist.pendingreviews.length > 0 ">Assigned reviews are :
+            <ul class="list-group ml-3 mr-3 mt-1">
+                <li  class="list-group-item" *ngFor ="let pendingreview of employeereviewlist.pendingreviews ;  index as i"> {{pendingreview}}
+                    <span class="close"><a class="btn-sm btn-primary flex-end"  
+                    [routerLink]="[ '/employee/:id/:prid/feedback', {id:employee.id, prid:i}]" 
+                    routerLinkActive="router-link-active" >Feedback</a>
+                </span> 
+                <br> </li>
+            </ul> 
+   
+    </li>
+    
+    <p *ngIf="employeereviewlist.pendingreviews.length <=0 ">No reviews assigned yet</p>
+</div>
+
+
+
+
+
+
+
+
+<!-- <ul *ngFor ="let review of employeereviewlist">
+    <li  >
+        <a routerLink="employeelist/id/reviews">
+        Name= {{ employee.employeename}} Department= {{employee.department}} </a>
+        <a class="btn btn-primary" routerLink="employee/id/edit">edit</a>  
+        <button class="delete" (click)="ondelete(employee.id)"> delete</button>
+    </li>
+</ul>
+ -->

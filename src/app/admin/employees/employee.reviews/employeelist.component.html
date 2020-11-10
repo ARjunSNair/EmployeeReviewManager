@@ -1,0 +1,37 @@
+
+    <div class="row">
+      <div class="col-xs-10">
+  
+        <hr>
+        <ul class="list-group" *ngFor ="let review of employee?.performanceReview; index as i">
+          <li           class="list-group-item"
+          style="cursor: pointer" >
+          {{employee.performanceReview[i]}}
+           <app-assignemployee [reviewid]=i [eid]=employee.employeeid [id]=employee.id ></app-assignemployee> 
+
+              <span class="badge badge-primary badge-pill"><a class="btn btn-primary" [routerLink]="[ '/admin/employees/:id/reviews/:rid', {id:employee.id,rid: i}]" routerLinkActive="router-link-active" >edit</a> 
+                </span>
+                  <!-- <button class="btn btn-primary"  (click)="ondelete(employee.id)"> delete</button> -->
+  
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  <!-- <ul *ngFor="let review of employee?.performanceReview; index as i">
+         <li> {{employee.performanceReview[i]}} 
+        <app-assignemployee [reviewid]=i [eid]=employee.employeeid [id]=employee.id ></app-assignemployee> 
+         <a [routerLink]="[ '/admin/employees/:id/reviews/:rid', {id:employee.id,rid: i}]" routerLinkActive="router-link-active" >edit</a>
+        </li>
+ 
+
+      
+  </ul>   -->
+
+
+
+   <p *ngIf="employee.performanceReview.length <= 0"> No performance reviews yet </p>
+<a  class="btn btn-primary" [routerLink]="[ '/admin/employees/:id/reviews/create',{id: employee.id} ]">create review </a>
+<!-- <app-addreviews [id]="id" [review] ></app-addreviews> -->
+<button onclick=" window.history.back()">Go Back</button>
+

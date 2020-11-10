@@ -1,0 +1,7 @@
+li {
+    list-style-type: none;
+}
+.close:hover {background: #000000;}
+.close{
+    background-color: aliceblue ;
+}

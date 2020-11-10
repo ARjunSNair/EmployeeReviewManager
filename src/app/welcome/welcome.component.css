@@ -1,0 +1,12 @@
+form{
+    width: 100%;
+}
+input {
+    background-color: #f6f6f6;
+    margin: 5px;
+    border: 2px solid #f6f6f6;
+    margin-bottom:5px;
+
+    border-radius: 5px 5px 5px 5px;
+  }
+  

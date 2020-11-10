@@ -1,0 +1,40 @@
+<!-- <ul class="list-group list-group-flush" *ngFor ="let employee of employees" >
+    <li class="list-group-item">   
+        <a [routerLink]="[ '/admin/employees', employee.id,'reviews']">
+        Name= {{ employee.employeename}}------------- Department= {{employee.department}}---------- id={{employee.id}} -------emailid={{ employee.employeeid }}</a>
+        
+        <a class="btn btn-primary"  [routerLink]="[ '/admin/employees/edit', employee.id]">edit</a>  
+        <button class="delete" (click)="ondelete(employee.id)"> delete</button></li>
+
+  </ul> -->
+  <div class="row">
+    <div class="col-xs-10">
+
+      <hr>
+      <ul class="list-group" *ngFor ="let employee of employees">
+        <li           class="list-group-item"
+        style="cursor: pointer" >
+            <a [routerLink]="[ '/admin/employees', employee.id,'reviews']">
+            Name= {{ employee.employeename}}              <br/>  Department= {{employee.department}} <br/>   id={{employee.id}} <br/>  emailid={{ employee.employeeid }}</a>
+            <span class="badge badge-primary badge-pill"><a class="btn btn-primary"  [routerLink]="[ '/admin/employees/edit', employee.id]">edit</a>  
+                <button class="btn btn-primary"  (click)="ondelete(employee.id)"> delete</button></span>
+
+        </li>
+
+      </ul>
+    </div>
+  </div>
+
+<!-- <ul *ngFor ="let employee of employees">
+    <li  >
+        <a [routerLink]="[ '/admin/employees', employee.id,'reviews']">
+        Name= {{ employee.employeename}}------------- Department= {{employee.department}}---------- id={{employee.id}} -------emailid={{ employee.employeeid }}</a>
+        
+        <a class="btn btn-primary"  [routerLink]="[ '/admin/employees/edit', employee.id]">edit</a>  
+        <button class="delete" (click)="ondelete(employee.id)"> delete</button>
+    </li>
+</ul> -->
+<p *ngIf="employees.length <=0 ">No Employees added yet</p>
+<!-- <app-addemployee></app-addemployee> -->
+<a [routerLink]="['/admin/employees/create']" class="btn btn-primary"  routerLinkActive="router-link-active" > Create an employee</a>
+

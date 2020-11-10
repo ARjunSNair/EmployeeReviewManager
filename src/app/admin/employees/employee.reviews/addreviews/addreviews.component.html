@@ -1,0 +1,12 @@
+<div class="container">
+    <form (submit)="onsavereview(postreview)" #postreview="ngForm" >
+        <input  type="text"  id = "reviewid" type="text" name="review" ngModel placeholder="enter performance review" [ngModel]='employee?.performanceReview' required #review="ngModel" ><br>
+        <button type="submit" >Add Review</button>
+        <button onclick=" window.history.back()">Go Back</button>
+    </form>
+    
+</div>
+
+
+  
+
