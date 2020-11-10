@@ -1,0 +1,27 @@
+This Project was done on  MEAN stack(mongodb,express,angular,node)
+ 
+Assumptions:
+	- Logins are based on routing to the views
+	- admin login is admin@abc.com
+	-backend server on port 3000 and angular server on 4200(default)
+	
+In this project I started with making a welcome component  which has the login field and based on the input it  is routed to the corresponding views 
+
+On Admin view:
+	-added employees component to list all the employees
+	-and adding employees  along with employeereviews 
+	-All adding/removing/updating/viewing employees has been accomplished along with
+	-adding/updating/and viewing performance reviews
+	-Seperate  models for created for  employee and pending reviewlist 
+	-All the http api calls/services were written in employee.service 
+
+On Employee View:
+	-Listed the performance reviews requiring feedback
+	And this list the new model called reviewlist mentioned aboove
+	-Feedback was  also submitted from the feedback component along with deleting the reviews that have given feedback
+	
+	   
+
+
+
+
